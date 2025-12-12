@@ -4,95 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motivational Quote</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Arial Black', sans-serif;
-            overflow: hidden;
-        }
-
-        .quote-container {
-            text-align: center;
-            padding: 40px;
-            cursor: pointer;
-        }
-
-        .quote {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #fff;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            line-height: 1.4;
-            letter-spacing: 2px;
-        }
-
-        .quote:hover {
-            transform: scale(1.1) rotate(-2deg);
-            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-            color: #ffd700;
-        }
-
-        .word {
-            display: inline-block;
-            transition: all 0.3s ease;
-            margin: 0 8px;
-        }
-
-        .word:hover {
-            transform: translateY(-10px) scale(1.2);
-            color: #ff6b6b;
-            text-shadow: 0 10px 20px rgba(255, 107, 107, 0.5);
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .quote-container:hover .quote {
-            animation: float 2s ease-in-out infinite;
-        }
-
-        @media (max-width: 768px) {
-            .quote {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="quote-container">
-        <div class="quote">
-            <span class="word">GET</span>
-            <span class="word">BACK</span>
-            <span class="word">TO</span>
-            <span class="word">STUDYING.</span>
-            <br>
-            <span class="word">GET</span>
-            <span class="word">YO</span>
-            <span class="word">BREAD</span>
-            <span class="word">UP</span>
-            <br>
-            <span class="word">NOT</span>
-            <span class="word">YO</span>
-            <span class="word">FUNNY</span>
-            <span class="word">UP!</span>
+    <div class="container">
+        <div class="quote-container">
+            <div class="quote">
+                <span class="word">GET</span>
+                <span class="word">BACK</span>
+                <span class="word">TO</span>
+                <span class="word">STUDYING!</span>
+                <br>
+                <span class="word">GET</span>
+                <span class="word">YO</span>
+                <span class="word">BREAD</span>
+                <span class="word">UP!</span>
+                <br>
+                <span class="word">NOT</span>
+                <span class="word">YO</span>
+                <span class="word">FUNNY</span>
+                <span class="word">UP!</span>
+            </div>
+        </div>
+
+        <div class="aWrap" data-src="audio\Bruno Mars - That’s What I Like [Official Music Video] [PMivT7MJ41M].wav">
+            <button class="aPlay" disabled><span class="aPlayIco"><i class="fa fa-play"></i></span></button>
+            <div class="range">
+                <span class="under-ranger"></span>
+                <input class="aSeek" type="range" min="0" value="0" step="1" disabled><span class="change-range"></span>
+            </div>
+            <div class="aCron">
+                <span class="aNow"></span> / <span class="aTime"></span>
+            </div>
+            <div class="volume-container">
+                <span class="aVolIco"><i class="fa fa-volume-up"></i></span>
+                <div class="range-volume">
+                <span class="under-ranger"></span>
+                <input class="aVolume" type="range" min="0" max="1" value="1" step="0.1" disabled><span class="change-range"></span>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="audio.js"></script>    
 </body>
 </html>
